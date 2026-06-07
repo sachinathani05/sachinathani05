@@ -7,8 +7,8 @@ SystemVerilog · UVM · Cadence Virtuoso · OpenLane/SKY130
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sachin--athani-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/sachin-athani)
 [![GitHub](https://img.shields.io/badge/GitHub-sachinathani05-181717?style=flat&logo=github)](https://github.com/sachinathani05/VLSI)
-[![IEEE](https://img.shields.io/badge/Published-IEEE%20Xplore-00629B?style=flat)](https://ieeexplore.ieee.org)
-[![IJRASET](https://img.shields.io/badge/Published-IJRASET-orange?style=flat)](https://www.ijraset.com)
+[![IEEE](https://img.shields.io/badge/Published-IEEE%20Xplore-00629B?style=flat)](https://ieeexplore.ieee.org/document/9688429)
+[![IJRASET](https://img.shields.io/badge/Published-IJRASET-orange?style=flat)](https://www.ijraset.com/research-paper/paper-on-crop-gen-forecast)
 
 ---
 
