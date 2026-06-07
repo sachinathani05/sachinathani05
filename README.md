@@ -26,9 +26,9 @@ Two peer-reviewed publications (IEEE Xplore + IJRASET). Currently targeting **De
 
 | Project | Key Results | Tools |
 |---------|------------|-------|
-| [CMOS Inverter — Schematic, Layout, DRC/LVS](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/CMOS%20Inverter) | DC + transient char · VM sweep · W/L parametric · LTSpice cross-check | Cadence Virtuoso · LTSpice |
-| [3-Stage Ring Oscillator](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/Ring%20Oscillator) | **f = 1.45 GHz**, tp = 115 ps · W-L sweep (freq/power CSV + plots) | Cadence Virtuoso · GPDK090 |
-| [UMC 65nm Standard Cell Design — Inverter, Tri-State Inverter, D Flip-Flop](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/UMC%2065nm) | Full DRC/LVS/PEX flow · pre/post-PEX timing & energy · fanout analysis · wire delay · energy-VDD sweep | Cadence Virtuoso · Calibre · Spectre |
+| [CMOS Inverter — Schematic, Layout, DRC/LVS](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/90nm%20(GPDK090)/CMOS%20Inverter) | DC + transient char · VM sweep · W/L parametric · LTSpice cross-check | Cadence Virtuoso · LTSpice |
+| [3-Stage Ring Oscillator](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/90nm%20(GPDK090)/Ring%20Oscillator) | **f = 1.45 GHz**, tp = 115 ps · W-L sweep (freq/power CSV + plots) | Cadence Virtuoso · GPDK090 |
+| [UMC 65nm Standard Cell Design — Inverter, Tri-State Inverter, D Flip-Flop](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/65nm%20(UMC)/Standard%20Cell%20Design%20(EEE8127)) | Full DRC/LVS/PEX flow · pre/post-PEX timing & energy · fanout analysis · wire delay · energy-VDD sweep | Cadence Virtuoso · Calibre · Spectre |
 
 **Newcastle University — EEE8127 Digital IC Design highlights:**
 
@@ -84,21 +84,21 @@ Built from scratch on EASy68K simulator. Features:
 
 | # | Project | Tools | Status |
 |---|---------|-------|--------|
-| 1 | [SPI Master UVM Testbench](https://github.com/sachinathani05/VLSI) | SystemVerilog · UVM · QuestaSim | 🟡 In Progress |
-| 2 | [AXI4-Lite Verification IP (VIP)](https://github.com/sachinathani05/VLSI) | SystemVerilog · UVM · Sequences | 🟡 In Progress |
-| 3 | [RISC-V ALU — RTL to GDSII (OpenLane/SKY130)](https://github.com/sachinathani05/VLSI) | OpenLane · SKY130 PDK · Yosys · OpenSTA | 🟡 In Progress |
-| 4 | [STA Timing Closure — Custom Constraints & ECO](https://github.com/sachinathani05/VLSI) | OpenSTA · SDC · TCL Scripting | 🟡 In Progress |
-| 5 | [RISC-V ALU — Full Stack Integration](https://github.com/sachinathani05/VLSI) | RTL → Synthesis → P&R → GDSII | 🟡 In Progress |
+| 1 | [SPI Master — RTL & Directed Verification (Week 1 ✅)](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P1_SPI_Master_RTL_Directed_Verification) | SystemVerilog · QuestaSim | 🟡 Week 2 In Progress |
+| 2 | [AXI4-Lite Verification IP (VIP)](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P2_AXI4_Lite_UVM_Verification) | SystemVerilog · UVM · Sequences | 🟡 In Progress |
+| 3 | [RISC-V ALU — RTL to GDSII (OpenLane/SKY130)](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P3_RTL_to_GDSII_OpenLane_SKY130) | OpenLane · SKY130 PDK · Yosys · OpenSTA | 🟡 In Progress |
+| 4 | [STA Timing Closure — Custom Constraints & ECO](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P4_STA_Timing_Closure) | OpenSTA · SDC · TCL Scripting | 🟡 In Progress |
+| 5 | [RISC-V ALU — Full Stack Integration](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P5_RISCV_ALU_Full_Stack) | RTL → Synthesis → P&R → GDSII | 🟡 In Progress |
 
 ### Advanced Analog IC Design — Cadence Virtuoso 45nm
 
 | # | Project | Key Technique | Status |
 |---|---------|--------------|--------|
-| 1 | Two-Stage Miller-Compensated OTA | Stability · PEX · Monte Carlo offset | 🟡 In Progress |
-| 2 | Low-Dropout Regulator (LDO) | Full IP sub-system · Loop stability · Load transient | 🟡 In Progress |
-| 3 | 6T SRAM Bit-Cell Array (4×4) | SNM butterfly curves · DRC/LVS · Yield analysis | 🟡 In Progress |
-| 4 | StrongARM Latch — High-Speed Comparator | Metastability · Common-centroid layout · PEX timing | 🟡 In Progress |
-| 5 | Switched-Capacitor Integrator | Charge injection · Capacitor matching · MOM layout | 🟡 In Progress |
+| 1 | [Two-Stage Miller-Compensated OTA](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/45nm/Project_01_Two_Stage_OTA_45nm) | DC · AC · Transient · Noise · CMRR · PSRR · Corner sweep | 🟡 Layout in progress |
+| 2 | Low-Dropout Regulator (LDO) | Full IP sub-system · Loop stability · Load transient | 🔜 Planned |
+| 3 | 6T SRAM Bit-Cell Array (4×4) | SNM butterfly curves · DRC/LVS · Yield analysis | 🔜 Planned |
+| 4 | StrongARM Latch — High-Speed Comparator | Metastability · Common-centroid layout · PEX timing | 🔜 Planned |
+| 5 | Switched-Capacitor Integrator | Charge injection · Capacitor matching · MOM layout | 🔜 Planned |
 
 ### MSc Dissertation — Newcastle University (2026)
 *Details to follow on completion — September 2026.*
