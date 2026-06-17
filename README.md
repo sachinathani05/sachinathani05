@@ -29,12 +29,12 @@ Two peer-reviewed publications (IEEE Xplore + IJRASET). Currently targeting **De
 | [3-Stage Ring Oscillator](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/90nm%20(GPDK090)/Ring%20Oscillator) | **f = 1.45 GHz**, tp = 115 ps · W-L sweep (freq/power CSV + plots) | Cadence Virtuoso · GPDK090 |
 | [UMC 65nm Standard Cell Design — Inverter, Tri-State Inverter, D Flip-Flop](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/65nm%20(UMC)/Standard%20Cell%20Design%20(EEE8127)) | Full DRC/LVS/PEX flow · pre/post-PEX timing & energy · fanout analysis · wire delay · energy-VDD sweep | Cadence Virtuoso · Calibre · Spectre |
 
-**45nm Two-Stage Miller-Compensated OTA highlights (GPDK045):**
+**45nm Two-Stage Miller-Compensated OTA — ✅ Completed (GPDK045):**
 
 - **Pre-layout:** DC gain 75.6 dB · GBW 57.5 MHz · Phase margin 60.9° · CMRR 76.4 dB · PSRR 164.4 dB
 - **Corner sweep (9 points):** TT/SS pass all corners; FF corner fails PM at 27°C/125°C — root-caused to PMOS mobility degradation, fix proposed (Cc 1.35pF → 1.55pF)
 - **Layout signoff:** DRC clean (0 violations) · LVS matched (2 documented waivers) · PEX extracted
-- **Post-layout debugging:** Root-caused a genuine LVS-vs-RCX extraction discrepancy (`_avConflict` net), a tail-node short from a shared substrate tap, and a structural M6 finger-wiring defect (25-finger device wired as a series chain instead of parallel) — the leading cause of a closed-loop bias-point convergence issue, now logged with a concrete layout fix
+- **Post-layout debugging:** Root-caused a genuine LVS-vs-RCX extraction discrepancy (`_avConflict` net), a tail-node short from a shared substrate tap, and a structural M6 finger-wiring defect (25-finger device wired as a series chain instead of parallel) — fully documented as a known limitation with proposed fix
 
 ---
 
@@ -120,8 +120,8 @@ Complete physical design flow from RTL to manufacturing-ready GDSII using OpenLa
 
 | # | Project | Key Technique | Status |
 |---|---------|--------------|--------|
-| 1 | [Two-Stage Miller-Compensated OTA](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/45nm/Project_01_Two_Stage_OTA_45nm) | Schematic + DRC/LVS/PEX signoff complete · post-PEX root-cause debugging documented | 🟡 PEX fix in progress |
-| 2 | Low-Dropout Regulator (LDO) | Full IP sub-system · Loop stability · Load transient | 🔜 Planned |
+| 1 | [Two-Stage Miller-Compensated OTA](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/45nm/Project_01_Two_Stage_OTA_45nm) | Full schematic-to-signoff flow · DRC/LVS/PEX · post-layout root-cause debugging documented | ✅ Completed |
+| 2 | Low-Dropout Regulator (LDO) | Full IP sub-system · Loop stability · Load transient | 🟡 In Progress |
 | 3 | 6T SRAM Bit-Cell Array (4×4) | SNM butterfly curves · DRC/LVS · Yield analysis | 🔜 Planned |
 | 4 | StrongARM Latch — High-Speed Comparator | Metastability · Common-centroid layout · PEX timing | 🔜 Planned |
 | 5 | Switched-Capacitor Integrator | Charge injection · Capacitor matching · MOM layout | 🔜 Planned |
