@@ -1,4 +1,3 @@
-## Hi there 👋
 # Sachin Balappa Athani
 
 **MSc Microelectronics · Newcastle University UK (2025–2026)**  
@@ -29,6 +28,15 @@ Two peer-reviewed publications (IEEE Xplore + IJRASET). Currently targeting **De
 | [CMOS Inverter — Schematic, Layout, DRC/LVS](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/90nm%20(GPDK090)/CMOS%20Inverter) | DC + transient char · VM sweep · W/L parametric · LTSpice cross-check | Cadence Virtuoso · LTSpice |
 | [3-Stage Ring Oscillator](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/90nm%20(GPDK090)/Ring%20Oscillator) | **f = 1.45 GHz**, tp = 115 ps · W-L sweep (freq/power CSV + plots) | Cadence Virtuoso · GPDK090 |
 | [UMC 65nm Standard Cell Design — Inverter, Tri-State Inverter, D Flip-Flop](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/65nm%20(UMC)/Standard%20Cell%20Design%20(EEE8127)) | Full DRC/LVS/PEX flow · pre/post-PEX timing & energy · fanout analysis · wire delay · energy-VDD sweep | Cadence Virtuoso · Calibre · Spectre |
+
+**45nm Two-Stage Miller-Compensated OTA highlights (GPDK045):**
+
+- **Pre-layout:** DC gain 75.6 dB · GBW 57.5 MHz · Phase margin 60.9° · CMRR 76.4 dB · PSRR 164.4 dB
+- **Corner sweep (9 points):** TT/SS pass all corners; FF corner fails PM at 27°C/125°C — root-caused to PMOS mobility degradation, fix proposed (Cc 1.35pF → 1.55pF)
+- **Layout signoff:** DRC clean (0 violations) · LVS matched (2 documented waivers) · PEX extracted
+- **Post-layout debugging:** Root-caused a genuine LVS-vs-RCX extraction discrepancy (`_avConflict` net), a tail-node short from a shared substrate tap, and a structural M6 finger-wiring defect (25-finger device wired as a series chain instead of parallel) — the leading cause of a closed-loop bias-point convergence issue, now logged with a concrete layout fix
+
+---
 
 **Newcastle University — EEE8127 Digital IC Design highlights:**
 
@@ -78,6 +86,25 @@ Built from scratch on EASy68K simulator. Features:
 
 ---
 
+### UART — Full RTL-to-GDSII Flow (OpenLane/SKY130)
+
+**[UART RTL-to-GDSII — SKY130 130nm](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P3_RTL_to_GDSII_OpenLane_SKY130)**
+
+Complete physical design flow from RTL to manufacturing-ready GDSII using OpenLane 2, Yosys, OpenROAD, Magic, KLayout, and Netgen on SkyWater SKY130A.
+
+- **Synthesis:** 267 cells, 60 flip-flops, 3034.16 µm² — 0 CHECK problems
+- **Floorplan:** 40.1% core utilisation (target 40%)
+- **Placement:** HPWL optimised 4127.8 → 3925.2 µm, 0.0 µm displacement
+- **CTS:** H-tree, real measured clock skew **~1.6 ps**
+- **Routing:** 0 congestion overflow, 0 antenna violations, 0 DRC violations
+- **STA:** **0 setup/hold violations across all 9 PVT corners** — worst setup 10.55 ns, worst hold 0.144 ns
+- **Sign-off:** DRC clean (Magic + KLayout independent cross-check), LVS matched uniquely (Netgen)
+- **Output:** 3 GDSII files generated, ready for foundry submission
+
+*Full debugging log included — toolchain setup on WSL2, Yosys/Pyosys version conflicts, KLayout display issues, and 10+ other real environment fixes documented.*
+
+---
+
 ## 🔨 In Progress
 
 ### Full-Stack Digital — UVM Verification + Physical Implementation
@@ -86,7 +113,6 @@ Built from scratch on EASy68K simulator. Features:
 |---|---------|-------|--------|
 | 1 | [SPI Master — RTL & Directed Verification (Week 1 ✅)](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P1_SPI_Master_RTL_Directed_Verification) | SystemVerilog · QuestaSim | 🟡 Week 2 In Progress |
 | 2 | [AXI4-Lite Verification IP (VIP)](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P2_AXI4_Lite_UVM_Verification) | SystemVerilog · UVM · Sequences | 🟡 In Progress |
-| 3 | [RISC-V ALU — RTL to GDSII (OpenLane/SKY130)](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P3_RTL_to_GDSII_OpenLane_SKY130) | OpenLane · SKY130 PDK · Yosys · OpenSTA | 🟡 In Progress |
 | 4 | [STA Timing Closure — Custom Constraints & ECO](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P4_STA_Timing_Closure) | OpenSTA · SDC · TCL Scripting | 🟡 In Progress |
 | 5 | [RISC-V ALU — Full Stack Integration](https://github.com/sachinathani05/VLSI/tree/main/RTL_to_GDSII_Projects/P5_RISCV_ALU_Full_Stack) | RTL → Synthesis → P&R → GDSII | 🟡 In Progress |
 
@@ -94,7 +120,7 @@ Built from scratch on EASy68K simulator. Features:
 
 | # | Project | Key Technique | Status |
 |---|---------|--------------|--------|
-| 1 | [Two-Stage Miller-Compensated OTA](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/45nm/Project_01_Two_Stage_OTA_45nm) | DC · AC · Transient · Noise · CMRR · PSRR · Corner sweep | 🟡 Layout in progress |
+| 1 | [Two-Stage Miller-Compensated OTA](https://github.com/sachinathani05/VLSI/tree/main/Cadence%20Virtuoso/45nm/Project_01_Two_Stage_OTA_45nm) | Schematic + DRC/LVS/PEX signoff complete · post-PEX root-cause debugging documented | 🟡 PEX fix in progress |
 | 2 | Low-Dropout Regulator (LDO) | Full IP sub-system · Loop stability · Load transient | 🔜 Planned |
 | 3 | 6T SRAM Bit-Cell Array (4×4) | SNM butterfly curves · DRC/LVS · Yield analysis | 🔜 Planned |
 | 4 | StrongARM Latch — High-Speed Comparator | Metastability · Common-centroid layout · PEX timing | 🔜 Planned |
@@ -173,17 +199,3 @@ Functional verification and test automation across 3 concurrent RFID-based retai
 ---
 
 *Active build — updated progressively through September 2026.*
-<!--
-**sachinathani05/sachinathani05** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
