@@ -1,8 +1,8 @@
 # Sachin Balappa Athani
 
 **MSc Microelectronics · Newcastle University UK (2025–2026)**  
-Design Verification · Analog/IC Layout · Physical Design  
-SystemVerilog · UVM · Cadence Virtuoso · OpenLane/SKY130
+Analog/IC Layout · Physical Design  
+Cadence Virtuoso · DRC/LVS/PEX · OpenLane/SKY130
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sachin--athani-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/sachin-athani)
 [![GitHub](https://img.shields.io/badge/GitHub-sachinathani05-181717?style=flat&logo=github)](https://github.com/sachinathani05/VLSI)
@@ -21,7 +21,7 @@ Two peer-reviewed publications (IEEE Xplore + IJRASET). Currently targeting **An
 
 ## ✅ Completed Projects
 
-### Analog IC Design — Cadence Virtuoso (GPDK090 / UMC 65nm)
+### Analog IC Design — Cadence Virtuoso (GPDK045 / UMC 65nm / GPDK090)
 
 | Project | Key Results | Tools |
 |---------|------------|-------|
