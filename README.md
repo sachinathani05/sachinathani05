@@ -15,7 +15,7 @@ SystemVerilog · UVM · Cadence Virtuoso · OpenLane/SKY130
 
 I'm a Microelectronics postgraduate bridging 2.5 years of industry verification experience with formal VLSI training across the full design-to-silicon stack. My background is in functional verification and test automation at Checkpoint Systems — skills I'm applying directly to RTL testbench design, UVM environments, and analog IC layout.
 
-Two peer-reviewed publications (IEEE Xplore + IJRASET). Currently targeting **Design Verification Engineer** and **Analog/IC Layout Engineer** roles in the UK and India.
+Two peer-reviewed publications (IEEE Xplore + IJRASET). Currently targeting **Analog/IC Layout Engineer** and **Physical Design Engineer** roles in the UK and India.
 
 ---
 
